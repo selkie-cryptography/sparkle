@@ -1,0 +1,7 @@
+[workspace]
+resolver = "2"
+members = [
+    "sparkle-spec",
+    "sparkle-core",
+    "sparkle-ristretto255",
+]

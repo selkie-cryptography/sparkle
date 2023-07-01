@@ -1,0 +1,45 @@
+[package]
+name = "sparkle-ristretto255"
+version = "0.1.0"
+edition = "2021"
+authors = ["Deirdre Connolly <durumcrustulum@gmail.com>"]
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/selkie-cryptography/sparkle"
+categories = ["cryptography"]
+keywords = ["cryptography", "crypto", "ristretto", "threshold", "signature"]
+description = "
+A Schnorr signature scheme over the prime-order Ristretto255 group that supports Sparkle.
+"
+
+[package.metadata.docs.rs]
+features = ["nightly"]
+
+[dependencies]
+curve25519-dalek = { version = "=4.0.0-rc.3", features = ["serde", "rand_core"] }
+sparkle-core = { path = "../sparkle-core", version = "0.1.0", features = ["test-impl"] }
+rand_core = "0.6"
+sha2 = "0.10.2"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+hex = "0.4.3"
+lazy_static = "1.4"
+proptest = "1.0"
+rand = "0.8"
+rand_chacha = "0.3"
+serde_json = "1.0"
+
+[features]
+nightly = []
+default = []
+serde = ["sparkle-core/serde"]
+
+[lib]
+# Disables non-criterion benchmark which is not used; prevents errors
+# when using criterion-specific flags
+bench = false
+
+[[bench]]
+name = "bench"
+harness = false
