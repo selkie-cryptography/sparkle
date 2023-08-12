@@ -8,10 +8,7 @@ license = "MIT OR Apache-2.0"
 repository = "https://github.com/selkie-cryptography/sparkle"
 categories = ["cryptography"]
 keywords = ["cryptography", "crypto", "threshold", "signature", "schnorr"]
-description = "
-Types and traits to support implementing Sparkle, a simple, adaptively secure,
-three-round Schnorr threshold signature scheme.
-"
+description = "Types and traits to support implementing Sparkle, a simple, adaptively secure, three-round Schnorr threshold signature scheme."
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

@@ -8,9 +8,7 @@ license = "MIT OR Apache-2.0"
 repository = "https://github.com/selkie-cryptography/sparkle"
 categories = ["cryptography"]
 keywords = ["cryptography", "crypto", "ristretto", "threshold", "signature"]
-description = "
-A Schnorr signature scheme over the prime-order Ristretto255 group that supports Sparkle.
-"
+description = "A Schnorr signature scheme over the prime-order Ristretto255 group that supports Sparkle."
 
 [package.metadata.docs.rs]
 features = ["nightly"]
@@ -35,11 +33,11 @@ nightly = []
 default = []
 serde = ["sparkle-core/serde"]
 
-[lib]
-# Disables non-criterion benchmark which is not used; prevents errors
-# when using criterion-specific flags
-bench = false
+# [lib]
+# # Disables non-criterion benchmark which is not used; prevents errors
+# # when using criterion-specific flags
+# bench = false
 
-[[bench]]
-name = "bench"
-harness = false
+# [[bench]]
+# name = "bench"
+# harness = false
